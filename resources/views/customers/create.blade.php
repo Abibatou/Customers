@@ -9,14 +9,25 @@
             <label for="name" class="col-sm-3 col-form-label">Name</label>
             <div class="col-sm-9">
                 <input name="name" type="text" class="form-control @error('name') is-invalid  @enderror" id="name" placeholder=" Name">
-            </div>
+                 @error('name')
+                <div class="invalid-feedback">
+                    Remplissez correctement ce champ !!
+                </div>
+            @enderror
             
+            </div>
+
         </div>
         <div class="form-group row">
             <label for="address" class="col-sm-3 col-form-label ">Address</label>
             <div class="col-sm-9">
                 <input name="address" type="text" class="form-control @error('address') is-invalid  @enderror" id="address"
                        placeholder="Adresse">
+                       @error('address')
+                <div class="invalid-feedback">
+                    Remplissez correctement ce champ !!
+                </div>
+            @enderror
             </div>
             
         </div>
@@ -25,6 +36,11 @@
             <div class="col-sm-9">
                 <input name="phone" type="text" class="form-control @error('phone') is-invalid  @enderror" id="phone"
                        placeholder="Phone">
+                       @error('phone')
+                <div class="invalid-feedback">
+                    Remplissez correctement ce champ !!
+                </div>
+            @enderror
             </div>
            
         </div>
@@ -33,6 +49,11 @@
             <div class="col-sm-9">
                 <input name="email" type="email" class="form-control @error('email') is-invalid  @enderror" id="email"
                        placeholder="Email">
+                       @error('Email')
+                <div class="invalid-feedback">
+                    Remplissez correctement ce champ !!
+                </div>
+            @enderror
             </div>
            
         </div>

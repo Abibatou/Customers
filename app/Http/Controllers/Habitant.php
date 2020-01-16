@@ -39,8 +39,8 @@ class Habitant extends Controller
         $this->validate($request, [
             'name' => 'bail|required|between:5,20|alpha',
             'address' =>'bail|required',
-            'phone' =>'bail|required',
-            'email' =>'bail|required|max:35|email'
+            'phone' =>'bail|required|integer',
+            'email' =>'bail|required|max:35|email|unique:customers'
             ]);
       $customer = new Customer;
       $customer->name = request('name');
